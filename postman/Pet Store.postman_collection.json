@@ -1,0 +1,324 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Pet Store",
+		"_postman_id": "8c9a77ee-95b9-5003-b2d5-d7393bc2f06d",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Pets 1",
+			"request": {
+				"url": {
+					"raw": "http://localhost:8080/pet?status=available",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"pet"
+					],
+					"query": [
+						{
+							"key": "status",
+							"value": "available",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get User By Id",
+			"request": {
+				"url": "http://localhost:8080/user/dobby1",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get Pets 2",
+			"request": {
+				"url": {
+					"raw": "http://localhost:8080/pet?status=pending",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"pet"
+					],
+					"query": [
+						{
+							"key": "status",
+							"value": "pending",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get Pets 3",
+			"request": {
+				"url": {
+					"raw": "http://localhost:8080/pet?status=sold",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"pet"
+					],
+					"query": [
+						{
+							"key": "status",
+							"value": "sold",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get Pet By Id",
+			"request": {
+				"url": "http://localhost:8080/pet/1",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get Order By Id",
+			"request": {
+				"url": "http://localhost:8080/store/order/2",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Post Pet",
+			"request": {
+				"url": "http://localhost:8080/pet",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"Dobby\",\n\t\"category\": {\n\t\t\"name\": \"Small\"\n\t},\n\t\"status\": \"available\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Post User",
+			"request": {
+				"url": "http://localhost:8080/user",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "api_key",
+						"value": "special-key",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"username\": \"dobby1\",\n\t\"firstName\": \"Dobby\",\n\t\"lastName\": \"Smith\",\n\t\"email\": \"dobby1@gmail.com\",\n\t\"phone\": \"7131112222\",\n\t\"password\": \"letmein\",\n\t\"userStatus\": 1\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Post Order",
+			"request": {
+				"url": "http://localhost:8080/store/order",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "api_key",
+						"value": "special-key",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"petId\": 1,\n\t\"quantity\": 1,\n\t\"shipDate\": \"2018-08-28\",\n\t\"status\": \"placed\",\n\t\"complete\": true\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Pet By Id",
+			"request": {
+				"url": "http://localhost:8080/pet/1",
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "api_key",
+						"value": "special-key",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Delete User By Id",
+			"request": {
+				"url": "http://localhost:8080/user/dobby1",
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "api_key",
+						"value": "special-key",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Order By Id",
+			"request": {
+				"url": "http://localhost:8080/store/order/2",
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "api_key",
+						"value": "special-key",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Put Pet By Id",
+			"request": {
+				"url": "http://localhost:8080/pet/1",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"Peppsi\",\n\t\"category\": {\n\t\t\"name\": \"Big\"\n\t},\n\t\"status\": \"pending\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Put User By Id",
+			"request": {
+				"url": "http://localhost:8080/user/dobby1",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "api_key",
+						"value": "special-key",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"username\": \"dobby2\",\n\t\"firstName\": \"Dobby\",\n\t\"lastName\": \"Smith\",\n\t\"email\": \"dobby1@gmail.com\",\n\t\"phone\": \"7131112222\",\n\t\"password\": \"letmein\",\n\t\"userStatus\": 1\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
